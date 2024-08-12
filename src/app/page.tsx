@@ -48,7 +48,7 @@ const Home: React.FC = () => {
                             </span>
                         </Box>
 
-                        <Box className='max-md:my-9'>
+                        <Box className='my-9'>
                           <Heading as='h3' className='text-7xl max-md:text-5xl'>
                             I AM 
                           </Heading>
