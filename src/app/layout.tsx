@@ -21,6 +21,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
+      </head>
       <body className={bebasNeue.className}>
         <Toaster position="bottom-center" />
 
