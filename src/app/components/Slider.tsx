@@ -14,7 +14,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 interface ArrowProps {
-    className: string;
     onClick: () => void;
 }
 
@@ -73,7 +72,9 @@ function AppSlider(props: SliderProps) {
             speed={500}
             slidesToShow={props.slidesToShow}
             slidesToScroll={1}
+            // @ts-ignore
             nextArrow={<SampleNextArrow />}
+            // @ts-ignore
             prevArrow={<SamplePrevArrow />}
             responsive={[
                 {
