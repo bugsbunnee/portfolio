@@ -46,7 +46,7 @@ const Skills = () => {
                 onHoverEnd={onHoverToggle}
                 onPointerMove={onPointerMove}
             >
-                <motion.div className="absolute t-0 r-0 l-0 b-0" variants={{ rest: { opacity: 0 }, hover: { opacity: 1 }}}>
+                <motion.div className="absolute t-0 r-0 l-0 b-0 w-96" variants={{ rest: { opacity: 0 }, hover: { opacity: 1 }}}>
                     <Suspense fallback={null}>
                         <Shapes
                             isHover={isHover}

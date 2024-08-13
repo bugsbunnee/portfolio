@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 import Footer from "@/app/components/Footer";
 import NavBar from "@/app/components/NavBar";
+import AuthProvider from "./auth/Provider";
 import QueryClientProvider from "@/app/providers/QueryClientProvider";
 import ThemeProvider from "@/app/providers/ThemeProvider";
 
@@ -28,17 +29,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Toaster position="bottom-center" />
 
         <QueryClientProvider>
-          <ThemeProvider>
-            <Container size='4' maxWidth='80%'>
-              <NavBar />
+          <AuthProvider>
+            <ThemeProvider>
+              <Container size='4' maxWidth='80%'>
+                <NavBar />
 
-              <main>
-                {children}
-              </main>
+                <main>
+                  {children}
+                </main>
 
-              <Footer />
-            </Container>
-          </ThemeProvider>
+                <Footer />
+              </Container>
+            </ThemeProvider>
+          </AuthProvider>
         </QueryClientProvider>
       </body>
     </html>

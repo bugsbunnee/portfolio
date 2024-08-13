@@ -1,13 +1,14 @@
 'use-client';
 
 import { motion } from 'framer-motion-3d';
-import { MotionConfig, MotionValue, Variants } from 'framer-motion';
+import { MotionConfig, MotionValue } from 'framer-motion';
 import { useRef, useLayoutEffect } from 'react';
 import { Canvas, PerspectiveCameraProps, useThree } from '@react-three/fiber';
 import { PerspectiveCamera } from 'three';
-import { spring, transition, mouseToLightRotation } from '@/app/utils';
-import useSmoothTransform from '@/app/hooks/useSmoothTransform';
+import { spring, transition } from '@/app/utils';
 import { Circle, Float, Text } from '@react-three/drei';
+
+import useSmoothTransform from '@/app/hooks/useSmoothTransform';
 
 interface Props {
   isHover: boolean;
@@ -15,7 +16,6 @@ interface Props {
   mouseX: MotionValue<number>,
   mouseY: MotionValue<number>,
 }
-
 interface CircleProps { 
   position: [x: number, y: number, z: number ], 
   title: string; 

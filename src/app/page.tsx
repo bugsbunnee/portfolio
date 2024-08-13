@@ -26,12 +26,12 @@ const Home: React.FC = () => {
           <ScrollProgress />
 
           <Section currentSectionName={SECTIONS.HERO} nextSectionName={SECTIONS.ABOUT}>
-              <Grid columns={{ sm: "1", md: "2", initial: "1" }} align='center' gap='9' px='5'>
-                  <Box className='bg-transparent max-md:hidden'>
+              <Grid columns={{ initial: "1", lg: "2" }} align='center' gap='9' px='5'>
+                  <Box className='bg-transparent h-full w-full'>
                       <Image
                           src={profile}
                           alt='Profile'
-                          className='object-cover'
+                          className='object-cover hidden lg:block'
                           style={{ width: '100%', height: '100%'}}
                           sizes='fill'
                       />
@@ -64,8 +64,8 @@ const Home: React.FC = () => {
 
                         <Text size={{ initial: '3', md: '5' }} my='2'>
                           Over 6 years of professional experience in delivering high-performance software solutions.
-                          Proficient in front-end and back-end development using technologies like JavaScript, Python, Node.js, and React. 
-                          Strong track record of building scalable, secure web applications and optimizing systems for efficiency. 
+                          Proficient in front-end, mobile and back-end development using technologies like JavaScript, Python, Node.js, and React / React Native. 
+                          Strong track record of building scalable, secure applications and optimizing systems for efficiency. 
                           Known for quick adaptation to new technologies, problem-solving skills, and delivering quality software that meets client needs on time.
                         </Text>
 
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
           </Section>
           
           <Section currentSectionName={SECTIONS.ABOUT} nextSectionName={SECTIONS.PROJECTS}>
-             <Grid columns={{ lg: '3', initial: '1' }} my='9'>
+             <Grid columns={{ lg: '3', md: '2', initial: '1' }} gap='5' my='9'>
                 <Flex justify='center' direction='column' align='center'>
                   <Certificates />
                   
@@ -85,13 +85,13 @@ const Home: React.FC = () => {
                   </Box>
                 </Flex>
 
-                <Flex justify='center' direction='column' align='center' className='max-sm:my-14'>
+                <Flex justify='center' direction='column' align='center' className='my-14 lg:my-0'>
                   <Box className='overflow-hidden rounded-full w-72 max-sm:w-56 h-full transition-all duration-700 blur-sm hover:blur-none hover:rounded-none hover:shadow-xl hover:shadow-slate-200'>
                     <Image src={me} alt='Me' sizes='fill'  className='w-full h-full object-cover' />
                   </Box>
                 </Flex>
                 
-                <Flex justify='center' direction='column' align='center'>
+                <Flex justify='center' direction='column' align='center' className='md:mt-9' flexGrow={{ md: '1' }}>
                   <Education />
                 </Flex>
              </Grid>

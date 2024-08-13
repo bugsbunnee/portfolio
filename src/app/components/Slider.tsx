@@ -1,7 +1,7 @@
 'use client';
 
 import React, { PropsWithChildren } from 'react';
-import Slider from "react-slick";
+import Slider, { ResponsiveObject } from "react-slick";
 
 import classNames from 'classnames';
 
@@ -19,6 +19,7 @@ interface ArrowProps {
 
 interface SliderProps extends PropsWithChildren {
     slidesToShow: number;
+    responsive?: ResponsiveObject[];
 }
 
 function SampleNextArrow({ onClick }: ArrowProps) {
@@ -72,37 +73,11 @@ function AppSlider(props: SliderProps) {
             speed={500}
             slidesToShow={props.slidesToShow}
             slidesToScroll={1}
+            responsive={props.responsive}
             // @ts-ignore
             nextArrow={<SampleNextArrow />}
             // @ts-ignore
             prevArrow={<SamplePrevArrow />}
-            responsive={[
-                {
-                  breakpoint: 1200,
-                  settings: {
-                    slidesToShow: 3,
-                  }
-                },
-                {
-                  breakpoint: 1000,
-                  settings: {
-                    slidesToShow: 2,
-                  }
-                },
-                {
-                  breakpoint: 800,
-                  settings: {
-                    slidesToShow: 1,
-                  }
-                },
-                {
-                  breakpoint: 600,
-                  settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                  }
-                },
-            ]}
         >
             {props.children}
         </Slider>

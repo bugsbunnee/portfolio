@@ -1,3 +1,5 @@
+'use client';
+
 import {  scroller } from 'react-scroll';
 
 export const mouseToLightRotation = (value: number) => {
