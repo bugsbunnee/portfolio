@@ -1,6 +1,6 @@
 import { NextAuthOptions } from 'next-auth';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import { User } from '@/app/utils';
+import { User } from '@prisma/client';
 
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from 'next-auth/providers/github';

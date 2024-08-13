@@ -15,15 +15,6 @@ export interface EmailData {
     message: string;
 }
 
-export interface User {
-    id: string;
-    firstName: string;
-    lastName : string;
-    email: string;
-    image: string;
-    isAdmin: boolean;
-}
-
 export interface ImageResponse { 
     url: string;
 }
