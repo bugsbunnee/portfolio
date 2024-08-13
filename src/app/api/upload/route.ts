@@ -3,12 +3,6 @@ import _ from 'lodash';
 import { NextRequest, NextResponse } from "next/server";
 import { uploadImage } from "@/app/services/cloudinary";
 
-export const config = {
-    api: {
-      bodyParser: false,
-    },
-};
-
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
     const formData = await request.formData();
 

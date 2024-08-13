@@ -7,12 +7,6 @@ import authOptions from "@/app/auth/authOptions";
 import prisma from "@/prisma/client";
 import axios from 'axios';
 
-export const config = {
-    api: {
-      bodyParser: false,
-    },
-};
-
 export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
     const session = await getServerSession(authOptions);
     if (!session || !session.user.isAdmin) return NextResponse.json({}, { status: 401 });
