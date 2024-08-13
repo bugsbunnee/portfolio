@@ -15,7 +15,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const skills = await prisma.project.findMany({
         where: { authorId: params.id },
         distinct: ['id'],
-        select: { skill: true }
+        select: { skills: true }
     });
 
   return NextResponse.json(skills);

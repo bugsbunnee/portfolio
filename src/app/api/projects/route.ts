@@ -35,24 +35,11 @@ export async function POST(request: NextRequest) {
                 isConfidential: body.isConfidential,
                 authorId: body.authorId,
                 stack: body.stack,
-                skills: {
-                    connectOrCreate: {
-                        where: {
-                            id: {
-                                in: body.skills,
-                            }
-                        },
-                        create: {
-                            id: {
-                                notIn: body.skills,
-                            }
-                        }
-                    }
-                },
-                include: {
-                    skills: true,
-                }
+                skills: body.skills,
             },
+            include: {
+                skills: true,
+            }
         });
     
         return NextResponse.json(newProject, { status: 201 });

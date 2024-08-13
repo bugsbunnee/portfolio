@@ -6,10 +6,13 @@ import prisma from "@/prisma/client";
 
 import authOptions from "@/app/auth/authOptions";
 
-export async function GET(request: NextRequest, { params }: { params: { id: string }}) {
-    const skills = await prisma.project.findMany({
+export async function GET(request: NextRequest) {
+    const skills = await prisma.skill.findMany({
         orderBy: { name: 'asc' },
-        select: { skills: true }
+        select: {
+            id: true,
+            name: true,
+        }
     });
 
     return NextResponse.json(skills);

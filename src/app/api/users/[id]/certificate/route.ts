@@ -24,7 +24,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     const updatedUser = await prisma.user.update({
         where: { id: user.id },
-        data: { certifications: { create: { title: body.get('title'), image: url }} },
+        data: { certifications: { create: { title: body.get('title') as string, image: url }} },
     });
     
     return NextResponse.json(updatedUser);

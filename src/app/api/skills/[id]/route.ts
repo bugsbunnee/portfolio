@@ -9,12 +9,12 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
   const session = await getServerSession(authOptions);
   if (!session || !session.user.isAdmin) return NextResponse.json({}, { status: 401 });
 
-  const issue = await prisma.issue.findUnique({
+  const issue = await prisma.skill.findUnique({
     where: { id: params.id },
   });
 
   if (!issue) return NextResponse.json({ error: "Invalid issue" }, { status: 404 });
 
-  await prisma.issue.delete({ where: { id: issue.id } });
+  await prisma.skill.delete({ where: { id: issue.id } });
   return NextResponse.json({});
 }
