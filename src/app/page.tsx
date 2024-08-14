@@ -12,8 +12,8 @@ const Home = dynamic(
 
 
 const HomePage: React.FC = async () => {
-    const response = await fetch(process.env.NEXTAUTH_URL + '/api/home');
-    const result = await response.json();
+    // const response = await fetch(process.env.NEXTAUTH_URL + '/api/home');
+    // const result = await response.json();
 
     return <Home />; 
 }
