@@ -13,8 +13,6 @@ import flagDark from '@/app/assets/images/flag-dark.png';
 import flagLight from '@/app/assets/images/flag-light.png';
 import carDark from '@/app/assets/images/car-dark.png';
 import carLight from '@/app/assets/images/car-light.png';
-
-
 interface Props {
     isAnimating: boolean;
 }
