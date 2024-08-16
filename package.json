@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "migrate:dev": "npx prisma migrate dev",
-    "prisma:format": "npx prisma format"
+    "prisma:format": "npx prisma format",
+    "prisma:generate": "npx prisma generate"
   },
   "prisma": {
     "schema": "src/prisma/schema.prisma"
@@ -29,6 +30,7 @@
     "bcrypt": "^5.1.1",
     "classnames": "^2.5.1",
     "cloudinary": "^2.4.0",
+    "emailjs": "^4.0.3",
     "formidable": "^3.5.1",
     "framer-motion": "^11.3.24",
     "framer-motion-3d": "^11.3.24",

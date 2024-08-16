@@ -11,7 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Box, Callout, Card, Flex, Text, TextArea, TextField, Button, Spinner } from '@radix-ui/themes';
 import { InfoCircledIcon } from '@radix-ui/react-icons';
 
-import { EmailData, contactSchema } from '@/app/utils';
+import { contactSchema } from '@/app/utils';
 import { sendEmail } from '../services/email';
 
 import Conditional from '@/app/components/Conditional';
@@ -31,19 +31,18 @@ const Contact: React.FC = () => {
     const handleSubmitContact =  async (data: ContactData, event: BaseSyntheticEvent<any, any, any> | undefined) => {
         if (event) event.preventDefault();
 
-        const emailData: EmailData = {
-            first_name: data.firstName,
-            last_name: data.lastName,
-            message: data.message,
-            from_email: data.email
-        };
-
         try {
-            await sendEmail(emailData as unknown as Record<string, string>);
+            await sendEmail({
+                first_name: data.firstName,
+                last_name: data.lastName,
+                message: data.message,
+                from_email: data.email
+            });
+
             toast.success('Thank you! I\'ll be in touch!');
             
             reset();
-        } catch (error) {
+        } catch (error) { 
             setError('Ooops! Looks like something went wrong. Please try again or shoot me a direct email.');
         }
     };

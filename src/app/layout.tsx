@@ -3,11 +3,12 @@ import { Container } from "@radix-ui/themes";
 import { bebasNeue } from "@/app/utils/fonts";
 import { Toaster } from "react-hot-toast";
 
-import Footer from "@/app/components/Footer";
-import NavBar from "@/app/components/NavBar";
 import AuthProvider from "./auth/Provider";
-import QueryClientProvider from "@/app/providers/QueryClientProvider";
+import Footer from "@/app/components/Footer";
+import GoogleAnalyticsScript from "./components/GoogleAnalyticsScripts";
+import NavBar from "@/app/components/NavBar";
 import ThemeProvider from "@/app/providers/ThemeProvider";
+import QueryClientProvider from "@/app/providers/QueryClientProvider";
 
 import '@radix-ui/themes/styles.css';
 import "./globals.css";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <head>
         <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
+        <GoogleAnalyticsScript />
       </head>
       <body className={bebasNeue.className}>
         <Toaster position="bottom-center" />

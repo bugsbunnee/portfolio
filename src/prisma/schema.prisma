@@ -42,6 +42,15 @@ model Project {
   authorId       String   @db.VarChar(255)
 }
 
+model Contact {
+  id             String   @id @default(cuid())
+  firstName      String   
+  lastName       String
+  email          String
+  message        String   @db.VarChar(255)
+  createdAt      DateTime @default(now())
+}
+
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
