@@ -14,8 +14,8 @@ datasource db {
 }
 
 enum Stack {
-  FRONTEND
-  MOBILE
+  FRONTEND_WEB
+  FRONTEND_MOBILE
   BACKEND
   FULLSTACK
 }

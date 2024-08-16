@@ -39,7 +39,7 @@ const Projects = () => {
             description: 'This app allows hospitals request medical consumables and track delivery in realtime',
             skill: ['React Native'],
             isConfidential: false,
-            stack: STACK.MOBILE
+            stack: STACK.FRONTEND_MOBILE
         },
         {
             url: 'https://aabs-website.vercel.app/',
@@ -48,7 +48,7 @@ const Projects = () => {
             description: 'A beautiful presentational website for a law firm with contact form email integration',
             skill: ['React JS', 'Next JS'],
             isConfidential: false,
-            stack: STACK.FRONTEND
+            stack: STACK.FRONTEND_WEB
         },
         {
             url: 'https://play.google.com/store/apps/details?id=com.lifebankdevs.dispatchmobile&hl=en',
@@ -57,7 +57,7 @@ const Projects = () => {
             skill: ['React Native', 'Redux JS', 'Firebase'],
             description: 'A mobile app for dispatch riders that allows them to keep track of their inventory and productivity',
             isConfidential: false,
-            stack: STACK.MOBILE
+            stack: STACK.FRONTEND_MOBILE
         },
         {
             url: 'https://www.lifebankcares.com/',
@@ -66,7 +66,7 @@ const Projects = () => {
             description: 'The official website for LifeBank',
             skill: ['Angular JS', 'TypeScript'],
             isConfidential: false,
-            stack: STACK.FRONTEND,
+            stack: STACK.FRONTEND_WEB,
         },
         {
             url: 'https://rsidms.com/',
@@ -84,7 +84,7 @@ const Projects = () => {
             skill: ['React JS', 'TypeScript', 'Express JS'],
             isConfidential: false,
             description: 'A HR management system that allows for Human Resource management functionality',
-            stack: STACK.FRONTEND
+            stack: STACK.FRONTEND_WEB
         },
         {
             url: 'https://one.lifebank.ng/',
@@ -93,7 +93,7 @@ const Projects = () => {
             description: 'A CRM for tracking onboarding of hospitals and timeline',
             skill: ['React JS', 'TypeScript'],
             isConfidential: true,
-            stack: STACK.FRONTEND
+            stack: STACK.FRONTEND_WEB
         },
         {
             url: 'https://quip.lifebank.ng/',
@@ -111,7 +111,7 @@ const Projects = () => {
             skill: ['React JS'],
             description: 'A web app that allows customers to place orders for delicacies',
             isConfidential: false,
-            stack: STACK.FRONTEND
+            stack: STACK.FRONTEND_WEB
         },
         {
             url: 'https://order.mamakabowls.com/',
