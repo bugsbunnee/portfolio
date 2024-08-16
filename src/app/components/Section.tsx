@@ -1,6 +1,6 @@
 'use client';
 
-import React, { PropsWithChildren, useState } from 'react';
+import React, { PropsWithChildren, useCallback, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Element } from 'react-scroll';
 import { Box, Flex, IconButton } from '@radix-ui/themes';
@@ -37,6 +37,10 @@ const Section: React.FC<Props> = ({ children, currentSectionName, nextSectionNam
         handleScrollToNextSection(nextSectionName);
     };
 
+    const onEndAnimation = useCallback(() => {
+        setAnimating(false);
+    }, []);
+
     return ( 
        <>
              <motion.div
@@ -59,7 +63,7 @@ const Section: React.FC<Props> = ({ children, currentSectionName, nextSectionNam
                 </Box>
             </Flex>
                 
-            <SectionDivider isAnimating={isAnimating} />
+            <SectionDivider isAnimating={isAnimating} onEndAnimation={onEndAnimation} />
        </>
      );
 };

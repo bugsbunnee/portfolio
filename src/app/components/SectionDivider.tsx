@@ -15,9 +15,10 @@ import carDark from '@/app/assets/images/car-dark.png';
 import carLight from '@/app/assets/images/car-light.png';
 interface Props {
     isAnimating: boolean;
+    onEndAnimation: () => void;
 }
 
-const SectionDivider: React.FC<Props> = ({ isAnimating }) => {
+const SectionDivider: React.FC<Props> = ({ isAnimating, onEndAnimation }) => {
     const themeStore = useThemeStore();
     const controls = useAnimationControls();
 
@@ -36,6 +37,8 @@ const SectionDivider: React.FC<Props> = ({ isAnimating }) => {
                     x: "0%",
                     transition: { duration: DURATION },
                 });
+
+                onEndAnimation();
             }, (DURATION + 2) * 1_000);
 
             return () => {
