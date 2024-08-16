@@ -24,6 +24,15 @@ import quickcheck from '@/app/assets/images/quickcheck.png';
 const Projects = () => {
     const projectItems: ProjectItem[] = [
         {
+            url: 'https://quickcheck.ng/',
+            title: 'QuickCheck App',
+            image: quickcheck,
+            skill: ['React Native', 'Redux JS', 'Django'],
+            description: 'Collaborator: An app for providing entrepreneurs and businesses with affordable loans.',
+            isConfidential: false,
+            stack: STACK.FULLSTACK
+        },
+        {
             url: 'https://play.google.com/store/apps/details?id=com.lifebankdevs.nerve&hl=en',
             title: 'Nerve By LifeBank',
             image: nerve,
@@ -45,7 +54,7 @@ const Projects = () => {
             url: 'https://play.google.com/store/apps/details?id=com.lifebankdevs.dispatchmobile&hl=en',
             title: 'Dispatch App',
             image: dispatch,
-            skill: ['React Native', 'Redux JS'],
+            skill: ['React Native', 'Redux JS', 'Firebase'],
             description: 'A mobile app for dispatch riders that allows them to keep track of their inventory and productivity',
             isConfidential: false,
             stack: STACK.MOBILE
@@ -64,7 +73,7 @@ const Projects = () => {
             title: 'RSIDMS',
             image: rsidms,
             description: 'A robust application for inspection report delivery',
-            skill: ['Angular JS', 'TypeScript'],
+            skill: ['React JS', 'Redux JS', 'TypeScript'],
             isConfidential: true,
             stack: STACK.FULLSTACK
         },
@@ -113,15 +122,6 @@ const Projects = () => {
             isConfidential: false,
             stack: STACK.FULLSTACK
         },
-        {
-            url: 'https://quickcheck.ng/',
-            title: 'QuickCheck App',
-            image: quickcheck,
-            skill: ['React Native', 'Django'],
-            description: 'Collaborator: An app for providing entrepreneurs and businesses with affordable loans.',
-            isConfidential: false,
-            stack: STACK.FULLSTACK
-        }
     ];
 
     const responsive: ResponsiveObject[] = [
