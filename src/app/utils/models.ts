@@ -1,3 +1,10 @@
+export enum STACK {
+    FRONTEND = 'FRONTEND',
+    MOBILE = 'MOBILE',
+    BACKEND = 'BACKEND',
+    FULLSTACK = 'FULLSTACK'
+}
+
 export interface ProjectItem {
     url: string;
     title: string;
@@ -5,7 +12,7 @@ export interface ProjectItem {
     description: string;
     skill: string[];
     isConfidential: boolean;
-    stack: 'FRONT-END' | 'MOBILE' | 'BE' | 'FULL-STACK'
+    stack: STACK
 }
 
 export interface EmailData {

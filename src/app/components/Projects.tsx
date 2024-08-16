@@ -7,7 +7,7 @@ import ProjectCard from '@/app/components/ProjectCard';
 
 import { ResponsiveObject } from 'react-slick';
 import { Box, Container, Flex, Heading, Text } from '@radix-ui/themes';
-import { ProjectItem } from '@/app/utils';
+import { ProjectItem, STACK } from '@/app/utils';
 
 import aabs from '@/app/assets/images/aabs.png';
 import nerve from '@/app/assets/images/nerve.png';
@@ -19,6 +19,7 @@ import dispatch from '@/app/assets/images/dispatch.png';
 import mamaka from '@/app/assets/images/mamaka.png';
 import quip from '@/app/assets/images/quip.png';
 import donewithit from '@/app/assets/images/donewithit.jpeg';
+import quickcheck from '@/app/assets/images/quickcheck.png';
 
 const Projects = () => {
     const projectItems: ProjectItem[] = [
@@ -29,7 +30,7 @@ const Projects = () => {
             description: 'This app allows hospitals request medical consumables and track delivery in realtime',
             skill: ['React Native'],
             isConfidential: false,
-            stack: 'FRONT-END'
+            stack: STACK.MOBILE
         },
         {
             url: 'https://aabs-website.vercel.app/',
@@ -38,7 +39,7 @@ const Projects = () => {
             description: 'A beautiful presentational website for a law firm with contact form email integration',
             skill: ['React JS', 'Next JS'],
             isConfidential: false,
-            stack: 'FRONT-END'
+            stack: STACK.FRONTEND
         },
         {
             url: 'https://play.google.com/store/apps/details?id=com.lifebankdevs.dispatchmobile&hl=en',
@@ -47,7 +48,7 @@ const Projects = () => {
             skill: ['React Native', 'Redux JS'],
             description: 'A mobile app for dispatch riders that allows them to keep track of their inventory and productivity',
             isConfidential: false,
-            stack: 'MOBILE'
+            stack: STACK.MOBILE
         },
         {
             url: 'https://www.lifebankcares.com/',
@@ -56,7 +57,7 @@ const Projects = () => {
             description: 'The official website for LifeBank',
             skill: ['Angular JS', 'TypeScript'],
             isConfidential: false,
-            stack: 'FRONT-END'
+            stack: STACK.FRONTEND,
         },
         {
             url: 'https://rsidms.com/',
@@ -65,7 +66,7 @@ const Projects = () => {
             description: 'A robust application for inspection report delivery',
             skill: ['Angular JS', 'TypeScript'],
             isConfidential: true,
-            stack: 'FULL-STACK'
+            stack: STACK.FULLSTACK
         },
         {
             url: 'https://order.mamakabowls.com/',
@@ -74,7 +75,7 @@ const Projects = () => {
             skill: ['React JS', 'TypeScript', 'Express JS'],
             isConfidential: false,
             description: 'A HR management system that allows for Human Resource management functionality',
-            stack: 'FULL-STACK'
+            stack: STACK.FRONTEND
         },
         {
             url: 'https://one.lifebank.ng/',
@@ -83,7 +84,7 @@ const Projects = () => {
             description: 'A CRM for tracking onboarding of hospitals and timeline',
             skill: ['React JS', 'TypeScript'],
             isConfidential: true,
-            stack: 'FRONT-END'
+            stack: STACK.FRONTEND
         },
         {
             url: 'https://quip.lifebank.ng/',
@@ -92,7 +93,7 @@ const Projects = () => {
             description: 'A platform where hospitals can purchase medical equipment and request BME services',
             skill: ['React JS', 'React Native', 'TypeScript'],
             isConfidential: true,
-            stack: 'FRONT-END'
+            stack: STACK.FULLSTACK
         },
         {
             url: 'https://order.mamakabowls.com/',
@@ -101,7 +102,7 @@ const Projects = () => {
             skill: ['React JS'],
             description: 'A web app that allows customers to place orders for delicacies',
             isConfidential: false,
-            stack: 'FRONT-END'
+            stack: STACK.FRONTEND
         },
         {
             url: 'https://order.mamakabowls.com/',
@@ -110,7 +111,16 @@ const Projects = () => {
             skill: ['React Native', 'Express JS'],
             description: 'A mobile app for selling used items',
             isConfidential: false,
-            stack: 'FULL-STACK'
+            stack: STACK.FULLSTACK
+        },
+        {
+            url: 'https://quickcheck.ng/',
+            title: 'QuickCheck App',
+            image: quickcheck,
+            skill: ['React Native', 'Django'],
+            description: 'Collaborator: An app for providing entrepreneurs and businesses with affordable loans.',
+            isConfidential: false,
+            stack: STACK.FULLSTACK
         }
     ];
 
