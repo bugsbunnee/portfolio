@@ -33,11 +33,6 @@ export async function POST(request: NextRequest) {
             isConfidential: body.isConfidential,
             authorId: body.authorId,
             stack: body.stack,
-            skills: {
-                connect: {
-                    skill: body.skills
-                }
-            },
         },
         include: {
             skills: true,
