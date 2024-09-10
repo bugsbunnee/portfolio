@@ -5,6 +5,8 @@ import { User } from '@prisma/client';
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from 'next-auth/providers/github';
 
+import _ from 'lodash';
+import axios from 'axios';
 import bcrypt from 'bcrypt';
 import prisma from '@/prisma/client';
 
@@ -30,22 +32,33 @@ export const authOptions: NextAuthOptions = {
         
                 const user = await prisma.user.findUnique({ where: { email: credentials.email }});
                 if (!user) return null;
-        
+
                 const passwordsMatch = await bcrypt.compare(credentials.password, user.hashedPassword!);
-                return passwordsMatch ? user : null;
+                if (!passwordsMatch) return null;
+
+                await prisma.user.update({
+                    where: { email: credentials.email },
+                    data: { lastLogin: new Date() }
+                });
+        
+                return user;
             },
         }),
         GitHubProvider({
             clientId: process.env.GITHUB_ID as string,
             clientSecret: process.env.GITHUB_SECRET as string,
-        })
+        }),
     ],
     callbacks: {
-        async session({ session, user }) {
-            return { ...session, isAdmin: (user as unknown as User).isAdmin }
-        },
-        async redirect({ url, baseUrl }) {
-            return baseUrl
+        async session({ session, token }) {
+            try {
+                const result = await axios.get<User>('http://localhost:4000/api/users/' + token.sub);
+                session.user = _.omit(result.data, ['hashedPassword']);
+            } catch(error) {
+                session.user.id = token.sub!;
+            } finally {
+                return session;
+            }
         },
     },
     session: {

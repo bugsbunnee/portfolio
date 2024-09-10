@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Conditional from '@/app/components/Conditional';
 
 import classNames from 'classnames';
 
@@ -22,7 +23,11 @@ import react from '@/app/assets/certificates/react-18.jpg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function Certificates() {
+interface Props {
+    displayLabel?: boolean;
+}
+
+function Certificates({ displayLabel = true }: Props) {
     const { theme } = useThemeStore();
 
     const certificates = [
@@ -50,7 +55,9 @@ function Certificates() {
 
     return ( 
         <Box width='17.5rem' height='11.75rem' className='relative'>
-            <Image src={theme === 'dark' ? lightMode : darkMode} alt='Certificated' className='w-44 h-36 object-cover ' />
+            <Conditional isVisible={displayLabel}>
+                <Image src={theme === 'dark' ? lightMode : darkMode} alt='Certificated' className='w-44 h-36 object-cover ' />
+            </Conditional>
 
             <AppSlider slidesToShow={1}>
                 {certificates.map((certificate) => (

@@ -22,15 +22,19 @@ body {
   --default-font-family: var(--font-bebas-neue) !important;
 }
 
-.dark-bg {
-  background-color: #121113;
-}
-
-.light-bg {
-  background-color: #ffffff;
-}
-
 @layer utilities {
+  .dark-bg {
+    background-color: #121113;
+  }
+  
+  .dark-bg-light {
+    background-color: #1a191b;
+  }
+  
+  .light-bg {
+    background-color: #ffffff;
+  }
+
   .nav-link {
     @apply hover:text-fuchsia-500 transition-colors;
   }

@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Container } from "@radix-ui/themes";
 import { bebasNeue } from "@/app/utils/fonts";
 import { Toaster } from "react-hot-toast";
 
 import AuthProvider from "./auth/Provider";
-import Footer from "@/app/components/Footer";
 import GoogleAnalyticsScript from "./components/GoogleAnalyticsScripts";
-import NavBar from "@/app/components/NavBar";
 import ThemeProvider from "@/app/providers/ThemeProvider";
 import QueryClientProvider from "@/app/providers/QueryClientProvider";
 
@@ -33,15 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <QueryClientProvider>
           <AuthProvider>
             <ThemeProvider>
-              <Container size='4' maxWidth='80%'>
-                <NavBar />
-
-                <main>
-                  {children}
-                </main>
-
-                <Footer />
-              </Container>
+              {children}
             </ThemeProvider>
           </AuthProvider>
         </QueryClientProvider>

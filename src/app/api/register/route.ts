@@ -7,8 +7,8 @@ import prisma  from '@/prisma/client';
 import authOptions from "@/app/auth/authOptions";
 
 export async function POST(request: NextRequest) {
-    const session = await getServerSession(authOptions);
-    if (!session) return NextResponse.json({ error: 'You\'re not allowed to perform this action' }, { status: 401 });
+    // const session = await getServerSession(authOptions);
+    // if (!session || !session.user.isAdmin) return NextResponse.json({ error: 'You\'re not allowed to perform this action' }, { status: 401 });
 
     const body = await request.json();
 

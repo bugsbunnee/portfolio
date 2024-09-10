@@ -45,6 +45,18 @@ export const skillSchema= z.object({
     skillName: z.string().min(3),
 });
 
+export const profilePictureSchema = z.object({
+    url: z.string().url()
+});
+
+export const signatureSchema = z.object({
+    publicId: z.string()
+});
+
+export const summarySchema = z.object({
+    summary: z.string().min(10).max(500),
+});
+
 export const userCertificateSchema = z.object({
     title: z.string().min(10).max(30),
     image: z.any()

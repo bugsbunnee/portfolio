@@ -24,6 +24,15 @@ import quickcheck from '@/app/assets/images/quickcheck.png';
 const Projects = () => {
     const projectItems: ProjectItem[] = [
         {
+            url: 'https://exactrem.vercel.app/',
+            title: 'Exactrem App',
+            image: '/exactrem.png',
+            skill: ['React JS', 'Next JS', 'Firebase'],
+            description: 'An interactive website for foreign exchange transfers',
+            isConfidential: false,
+            stack: STACK.FRONTEND_WEB
+        },
+        {
             url: 'https://quickcheck.ng/',
             title: 'QuickCheck App',
             image: quickcheck,
@@ -171,7 +180,7 @@ const Projects = () => {
                         ))}
                     </AppSlider>
                 </Container>
-            </Flex>
+            </Flex> 
         </Flex>
      );
 }

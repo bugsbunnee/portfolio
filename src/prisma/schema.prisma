@@ -93,6 +93,8 @@ model User {
   email            String          @unique
   image            String?
   hashedPassword   String
+  summary          String          @db.VarChar(500)
+  lastLogin        DateTime        @default(now())
   isAdmin          Boolean         @default(false)
   accounts         Account[]
   sessions         Session[]

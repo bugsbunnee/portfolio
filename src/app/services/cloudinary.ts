@@ -12,34 +12,10 @@ const config = cloudinary.config({
   api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
 });
 
-export function signRequest(publicId: string) {
-    const timestamp = Math.round((new Date).getTime() / 1000);
-    const eager = "c_pad,h_300,w_400|c_crop,h_200,w_260";
+export function signRequest(paramsToSign: object) {
+    const signature = cloudinary.utils.api_sign_request(paramsToSign, config.api_secret as string);
 
-    const signature = cloudinary.utils.api_sign_request({ timestamp, public_id: publicId }, config.api_secret as string);
-
-    return { signature, timestamp, eager, apiKey: config.api_key };
-}
-
-export async function uploadImage(file: File | string) {
-    const url = `${process.env.NEXT_PUBLIC_CLD_API_URL}/${process.env.NEXT_PUBLIC_CLOUD_NAME}/auto/upload`;
-    
-    const formData = new FormData();
-    const publicID = typeof file === 'string' ? Date.now().toString() : file.name;
-    const signedData = signRequest(publicID);
-
-    formData.append("api_key", signedData.apiKey as string);
-    formData.append('file', file);
-    formData.append('public_id', publicID);
-    formData.append("timestamp", signedData.timestamp.toString());
-    formData.append("signature", signedData.signature);
-
-    try {
-        const result = await axios.post<Response>(url, formData);
-        return result.data.secure_url;
-    } catch (error) {
-        return null;
-    }
+    return { signature };
 }
 
 export function validateFile(file: File) {

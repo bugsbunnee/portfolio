@@ -1,12 +1,11 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import HomeLoading from './loading';
+import dynamic from 'next/dynamic';
 
 const Home = dynamic(
   () => import('@/app/components/Home'),
   { ssr: true, loading: () => <HomeLoading /> }
 )
-
 
 const HomePage: React.FC = () => {
     return <Home />; 

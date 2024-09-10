@@ -24,27 +24,27 @@ export async function POST(request: NextRequest) {
     const author = await prisma.user.findUnique({ where: { id: body.authorId } });
     if (!author) return NextResponse.json({ error: 'Invalid User.'}, { status: 400 });
     
-    const url = await uploadImage(body.image);
-    if (url) {
-        const newProject = await prisma.project.create({
-            data: {
-                title: body.title,
-                url: body.url,
-                image: url,
-                description: body.description,
-                isConfidential: body.isConfidential,
-                authorId: body.authorId,
-                stack: body.stack,
-                skills: body.skills,
-            },
-            include: {
-                skills: true,
-            }
-        });
-    
-        return NextResponse.json(newProject, { status: 201 });
-    }
 
-    return NextResponse.json({ error: 'Invalid image '}, { status: 400 });
+    const newProject = await prisma.project.create({
+        data: {
+            title: body.title,
+            url: body.url,
+            image: '',
+            description: body.description,
+            isConfidential: body.isConfidential,
+            authorId: body.authorId,
+            stack: body.stack,
+            skills: {
+                connect: {
+                    skill: body.skills
+                }
+            },
+        },
+        include: {
+            skills: true,
+        }
+    });
+    
+    return NextResponse.json(newProject, { status: 201 });
 
 }
