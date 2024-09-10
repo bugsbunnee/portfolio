@@ -37,7 +37,7 @@ const ProfileSummary: React.FC = () => {
 
                     <Button size='2' onClick={() => session!.user ? setSummaryUpdateVisible(true) : null}>
                         Update Summary
-                    </Button>
+                    </Button> 
                 </Flex>
             </Conditional>
 
