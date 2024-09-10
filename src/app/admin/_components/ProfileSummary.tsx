@@ -30,7 +30,7 @@ const ProfileSummary: React.FC = () => {
                     <Text className='text-justify min-h-48' color='gray' size='2'>
                         {session!.user!.summary}
                     </Text>
-                </Box>
+                </Box> 
 
                 <Flex justify='between' align='center'>
                     <Avatar color='cyan' size='2' radius='full' fallback={getInitials([session!.user.firstName!, session!.user.lastName!])} />
