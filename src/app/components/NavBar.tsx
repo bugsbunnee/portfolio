@@ -10,14 +10,11 @@ import { Box, Button, Flex } from '@radix-ui/themes';
 import { handleScrollToNextSection, SECTIONS } from '../utils';
 
 import MobileNavBar from './MobileNavBar';
+import useThemeStore from '@/app/store/theme';
 
 import classNames from 'classnames';
 import routes from '@/app/utils/routes';
 
-import useThemeStore from '@/app/store/theme';
-
-import darkMode from '@/app/assets/images/dark-mode.png';
-import lightMode from '@/app/assets/images/light-mode.png';
 
 const NavLinks = () => {
     const currentPath = usePathname();
@@ -90,7 +87,7 @@ const NavBar = () => {
                             onClick={themeStore.toggleTheme}
                         >
                             <Image
-                                src={isDark ? darkMode : lightMode}
+                                src={isDark ? '/images/dark-mode.png' : '/images/light-mode.png'}
                                 alt="Toggle"
                                 className='dark-theme object-cover h-80 w-auto max-sm:h-36 md:h-48'
                             />

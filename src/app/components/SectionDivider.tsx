@@ -9,10 +9,6 @@ import { motion } from 'framer-motion';
 
 import useThemeStore from '@/app/store/theme';
 
-import flagDark from '@/app/assets/images/flag-dark.png';
-import flagLight from '@/app/assets/images/flag-light.png';
-import carDark from '@/app/assets/images/car-dark.png';
-import carLight from '@/app/assets/images/car-light.png';
 interface Props {
     isAnimating: boolean;
     onEndAnimation: () => void;
@@ -56,10 +52,10 @@ const SectionDivider: React.FC<Props> = ({ isAnimating, onEndAnimation }) => {
                 'border-white': isDarkTheme,
             })} 
         >
-            <Image src={isDarkTheme ? flagLight : flagDark} alt='Flag' className='w-6 h-66 object-contain' />
+            <Image src={isDarkTheme ? '/images/flag-light.png' : '/images/flag-dark.png'} alt='Flag' className='w-6 h-66 object-contain' />
             <Flex flexGrow='1' justify='end'>
                 <motion.div animate={controls}>
-                    <Image src={isDarkTheme ? carLight : carDark} alt='Car' className='w-32 h-6 object-contain' />
+                    <Image src={isDarkTheme ? '/images/car-light.png' : '/images/car-dark.png'} alt='Car' className='w-32 h-6 object-contain' />
                 </motion.div>
             </Flex>
         </Flex>

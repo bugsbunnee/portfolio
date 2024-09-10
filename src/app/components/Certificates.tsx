@@ -11,15 +11,6 @@ import { Box } from '@radix-ui/themes';
 import AppSlider from '@/app/components/Slider';
 import useThemeStore from '@/app/store/theme';
 
-import darkMode from '@/app/assets/images/certificates-light.png';
-import lightMode from '@/app/assets/images/certificates-dark.png';
-
-import dataStructures from '@/app/assets/certificates/data-structures.jpg';
-import django from '@/app/assets/certificates/django.jpg';
-import javascriptBasics from '@/app/assets/certificates/javascript-basics.jpg';
-import python from '@/app/assets/certificates/python.jpg'
-import react from '@/app/assets/certificates/react-18.jpg'
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -32,23 +23,23 @@ function Certificates({ displayLabel = true }: Props) {
 
     const certificates = [
         {
-            image: python,
+            image: '/certificates/python.jpg',
             title: 'Python',
         },
         {
-            image: dataStructures,
+            image: '/certificates/data-structures.jpg',
             title: 'Data Structures',
         },
         {
-            image: django,
+            image: '/certificates/django.jpg',
             title: 'Django',
         },
         {
-            image: javascriptBasics,
+            image: '/certificates/javascript-basics.jpg',
             title: 'Javascript Basics',
         },
         {
-            image: react,
+            image: '/certificates/react-18.jpg',
             title: 'React',
         },
     ];
@@ -56,7 +47,7 @@ function Certificates({ displayLabel = true }: Props) {
     return ( 
         <Box width='17.5rem' height='11.75rem' className='relative'>
             <Conditional isVisible={displayLabel}>
-                <Image src={theme === 'dark' ? lightMode : darkMode} alt='Certificated' className='w-44 h-36 object-cover ' />
+                <Image src={theme === 'dark' ? '/images/certificates-dark.png' : '/images/certificates-light.png'} alt='Certificated' className='w-44 h-36 object-cover ' />
             </Conditional>
 
             <AppSlider slidesToShow={1}>

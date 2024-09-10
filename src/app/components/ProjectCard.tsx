@@ -6,11 +6,10 @@ import Image from "next/image";
 import classNames from 'classnames';
 
 import { Badge, Box, Button, Card, Flex, Grid, Heading, Text } from "@radix-ui/themes";
+import { useRouter } from 'next/navigation';
+
 import { ProjectItem } from '../utils';
 
-import portfolio from '@/app/assets/images/portfolio.png';
-import Conditional from './Conditional';
-import { useRouter } from 'next/navigation';
 
 interface Props {
     project: ProjectItem;

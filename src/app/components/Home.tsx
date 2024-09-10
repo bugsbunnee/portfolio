@@ -20,9 +20,6 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 import Skills from '@/app/components/Skills';
 
-import me from '@/app/assets/images/me.jpg';
-import profile from '@/app/assets/images/profile.png';
-
 const Home: React.FC = () => {
     return ( 
         <>
@@ -40,7 +37,7 @@ const Home: React.FC = () => {
                               <Box className=' absolute w-full h-full'/>
 
                               <Image
-                                  src={profile}
+                                  src='/images/profile.png'
                                   alt='Profile'
                                   className='grayscale-0 hover:grayscale transition-all duration-500 object-cover'
                                   style={{ width: '100%', height: '100%'}}
@@ -100,7 +97,7 @@ const Home: React.FC = () => {
 
                     <Flex justify='center' direction='column' align='center' className='my-14 lg:my-0'>
                       <Box className='overflow-hidden rounded-full w-72 max-sm:w-56 h-full transition-all duration-700 blur-sm hover:blur-none hover:rounded-none hover:shadow-xl hover:shadow-slate-200'>
-                        <Image src={me} alt='Me' sizes='fill'  className='w-full h-full object-cover' />
+                        <Image src='/images/me.jpg' alt='Me' sizes='fill'  className='w-full h-full object-cover' />
                       </Box>
                     </Flex>
                     

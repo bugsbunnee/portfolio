@@ -6,9 +6,6 @@ import Image from 'next/image';
 import { Box } from '@radix-ui/themes';
 import { motion } from 'framer-motion';
 
-import profile from '@/app/assets/images/profile.png';
-
-
 const HomeLoading = () => {
     return ( 
         <Box className='w-full h-svh flex justify-center items-center'>
@@ -33,7 +30,7 @@ const HomeLoading = () => {
                     <Box className=' absolute w-full h-full'/>
 
                     <Image
-                        src={profile}
+                        src='/images/profile.png'
                         alt='Profile'
                         className='transition-all duration-500 object-cover'
                         style={{ width: '100%', height: '100%'}}

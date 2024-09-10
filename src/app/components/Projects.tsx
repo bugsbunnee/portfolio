@@ -9,24 +9,13 @@ import { ResponsiveObject } from 'react-slick';
 import { Box, Container, Flex, Heading, Text } from '@radix-ui/themes';
 import { ProjectItem, STACK } from '@/app/utils';
 
-import aabs from '@/app/assets/images/aabs.png';
-import nerve from '@/app/assets/images/nerve.png';
-import lifebank from '@/app/assets/images/lifebank.png';
-import hrms from '@/app/assets/images/hrms.png';
-import rsidms from '@/app/assets/images/rsidms.png';
-import one from '@/app/assets/images/one.png';
-import dispatch from '@/app/assets/images/dispatch.png';
-import mamaka from '@/app/assets/images/mamaka.png';
-import quip from '@/app/assets/images/quip.png';
-import donewithit from '@/app/assets/images/donewithit.jpeg';
-import quickcheck from '@/app/assets/images/quickcheck.png';
 
 const Projects = () => {
     const projectItems: ProjectItem[] = [
         {
             url: 'https://exactrem.vercel.app/',
             title: 'Exactrem App',
-            image: '/exactrem.png',
+            image: '/images/exactrem.png',
             skill: ['React JS', 'Next JS', 'Firebase'],
             description: 'An interactive website for foreign exchange transfers',
             isConfidential: false,
@@ -35,7 +24,7 @@ const Projects = () => {
         {
             url: 'https://quickcheck.ng/',
             title: 'QuickCheck App',
-            image: quickcheck,
+            image: '/images/quickcheck.png',
             skill: ['React Native', 'Redux JS', 'Django'],
             description: 'Collaborator: An app for providing entrepreneurs and businesses with affordable loans.',
             isConfidential: false,
@@ -44,7 +33,7 @@ const Projects = () => {
         {
             url: 'https://play.google.com/store/apps/details?id=com.lifebankdevs.nerve&hl=en',
             title: 'Nerve By LifeBank',
-            image: nerve,
+            image: '/images/nerve.png',
             description: 'This app allows hospitals request medical consumables and track delivery in realtime',
             skill: ['React Native'],
             isConfidential: false,
@@ -53,7 +42,7 @@ const Projects = () => {
         {
             url: 'https://aabs-website.vercel.app/',
             title: 'A.A. Bridge & Spartan Website',
-            image: aabs,
+            image: '/images/aabs.png',
             description: 'A beautiful presentational website for a law firm with contact form email integration',
             skill: ['React JS', 'Next JS'],
             isConfidential: false,
@@ -62,7 +51,7 @@ const Projects = () => {
         {
             url: 'https://play.google.com/store/apps/details?id=com.lifebankdevs.dispatchmobile&hl=en',
             title: 'Dispatch App',
-            image: dispatch,
+            image: '/images/dispatch.png',
             skill: ['React Native', 'Redux JS', 'Firebase'],
             description: 'A mobile app for dispatch riders that allows them to keep track of their inventory and productivity',
             isConfidential: false,
@@ -71,7 +60,7 @@ const Projects = () => {
         {
             url: 'https://www.lifebankcares.com/',
             title: 'LifeBank Official Website',
-            image: lifebank,
+            image: '/images/lifebank.png',
             description: 'The official website for LifeBank',
             skill: ['Angular JS', 'TypeScript'],
             isConfidential: false,
@@ -80,7 +69,7 @@ const Projects = () => {
         {
             url: 'https://rsidms.com/',
             title: 'RSIDMS',
-            image: rsidms,
+            image: '/images/rsidms.png',
             description: 'A robust application for inspection report delivery',
             skill: ['React JS', 'Redux JS', 'TypeScript'],
             isConfidential: true,
@@ -89,7 +78,7 @@ const Projects = () => {
         {
             url: 'https://order.mamakabowls.com/',
             title: 'HRMS',
-            image: hrms,
+            image: '/images/hrms.png',
             skill: ['React JS', 'TypeScript', 'Express JS'],
             isConfidential: false,
             description: 'A HR management system that allows for Human Resource management functionality',
@@ -98,7 +87,7 @@ const Projects = () => {
         {
             url: 'https://one.lifebank.ng/',
             title: 'One Hospital',
-            image: one,
+            image: '/images/one.png',
             description: 'A CRM for tracking onboarding of hospitals and timeline',
             skill: ['React JS', 'TypeScript'],
             isConfidential: true,
@@ -107,7 +96,7 @@ const Projects = () => {
         {
             url: 'https://quip.lifebank.ng/',
             title: 'QUIP',
-            image: quip,
+            image: '/images/quip.png',
             description: 'A platform where hospitals can purchase medical equipment and request BME services',
             skill: ['React JS', 'React Native', 'TypeScript'],
             isConfidential: true,
@@ -116,7 +105,7 @@ const Projects = () => {
         {
             url: 'https://order.mamakabowls.com/',
             title: 'Mamaka Bowls',
-            image: mamaka,
+            image: '/images/mamaka.png',
             skill: ['React JS'],
             description: 'A web app that allows customers to place orders for delicacies',
             isConfidential: false,
@@ -125,7 +114,7 @@ const Projects = () => {
         {
             url: 'https://order.mamakabowls.com/',
             title: 'Done With It',
-            image: donewithit,
+            image: '/images/donewithit.jpeg',
             skill: ['React Native', 'Express JS'],
             description: 'A mobile app for selling used items',
             isConfidential: false,
