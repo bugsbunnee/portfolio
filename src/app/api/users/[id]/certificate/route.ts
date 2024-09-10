@@ -7,8 +7,8 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/prisma/client";
 
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
-    // const session = await getServerSession(authOptions);
-    // if (!session || !session.user.isAdmin) return NextResponse.json({}, { status: 401 });
+    const session = await getServerSession(authOptions);
+    if (!session || !session.user.isAdmin) return NextResponse.json({}, { status: 401 });
 
     const body = await request.formData();
 
@@ -21,10 +21,10 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     // const url = await uploadImage(body.get('image') as File);
     // if (!url) return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
 
-    const updatedUser = await prisma.user.update({
-        where: { id: user.id },
-        data: { certifications: { create: { title: body.get('title') as string, image: url }} },
-    });
+    // const updatedUser = await prisma.user.update({
+    //     where: { id: user.id },
+    //     data: { certifications: { create: { title: body.get('title') as string }} },
+    // });
     
-    return NextResponse.json(updatedUser);
+    return NextResponse.json({});
 }

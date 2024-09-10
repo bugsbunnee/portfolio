@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
+import { projectSchema } from "@/app/utils";
 
 import authOptions from "@/app/auth/authOptions";
 import prisma from "@/prisma/client";
 
-import { projectSchema } from "@/app/utils";
-import { uploadImage } from "@/app/services/cloudinary";
 
 export async function GET(request: NextRequest) {
     const projects = await prisma.project.findMany({ orderBy: { title: 'asc' }});
