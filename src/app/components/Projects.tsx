@@ -181,7 +181,7 @@ const Projects = () => {
                     </AppSlider>
                 </Container>
             </Flex> 
-        </Flex>
+        </Flex> 
      );
 }
  
