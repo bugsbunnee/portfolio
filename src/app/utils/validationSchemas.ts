@@ -35,6 +35,7 @@ export const userSchema = z.object({
     isAdmin: z.boolean().default(false),
     email: z.string().email(),
     password: z.string().min(5),
+    summary: z.string().min(10).max(255)
 });
 
 export const authorizeSchema = z.object({
