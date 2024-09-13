@@ -14,7 +14,7 @@ const AdminLayout = ({ children }: Props) => {
                 <main className='p-10 w-full h-full max-h-lvh overflow-y-scroll'>{children}</main>
             </Flex>
         </Box>
-    )
+    );
 }
 
 
