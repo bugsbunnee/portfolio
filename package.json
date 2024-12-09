@@ -4,12 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 4000",
-    "build": "npx prisma generate && npx prisma migrate deploy && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "migrate:dev": "npx prisma migrate dev",
-    "prisma:format": "npx prisma format",
-    "prisma:generate": "npx prisma generate"
+    "lint": "next lint"
   },
   "prisma": {
     "schema": "src/prisma/schema.prisma"
