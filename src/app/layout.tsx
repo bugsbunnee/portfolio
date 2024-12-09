@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { bebasNeue } from "@/app/utils/fonts";
 import { Toaster } from "react-hot-toast";
 
-import AuthProvider from "./auth/Provider";
 import GoogleAnalyticsScript from "./components/GoogleAnalyticsScripts";
 import ThemeProvider from "@/app/providers/ThemeProvider";
 import QueryClientProvider from "@/app/providers/QueryClientProvider";
@@ -28,11 +27,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Toaster position="bottom-center" />
 
         <QueryClientProvider>
-          <AuthProvider>
-            <ThemeProvider>
-              {children}
-            </ThemeProvider>
-          </AuthProvider>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
         </QueryClientProvider>
       </body>
     </html>

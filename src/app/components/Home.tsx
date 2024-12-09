@@ -39,6 +39,8 @@ const Home: React.FC = () => {
                               <Image
                                   src='/images/profile.png'
                                   alt='Profile'
+                                  width="100"
+                                  height="100"
                                   className='grayscale-0 hover:grayscale transition-all duration-500 object-cover'
                                   style={{ width: '100%', height: '100%'}}
                                   sizes='fill'
@@ -97,7 +99,14 @@ const Home: React.FC = () => {
 
                     <Flex justify='center' direction='column' align='center' className='my-14 lg:my-0'>
                       <Box className='overflow-hidden rounded-full w-72 max-sm:w-56 h-full transition-all duration-700 blur-sm hover:blur-none hover:rounded-none hover:shadow-xl hover:shadow-slate-200'>
-                        <Image src='/images/me.jpg' alt='Me' sizes='fill'  className='w-full h-full object-cover' />
+                        <Image
+                          src='/images/me.jpg'
+                          alt='Me'
+                          sizes='fill'
+                          className='w-full h-full object-cover' 
+                          width="100"
+                          height="100"
+                        />
                       </Box>
                     </Flex>
                     

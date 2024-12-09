@@ -31,7 +31,13 @@ const Education = () => {
     return ( 
         <>
             <Box className='relative'>
-                <Image src={theme === 'dark' ? '/images/qualifications-light.png' : '/images/qualifications-dark.png'} alt='Qualifications' className='w-44 h-36 object-cover' />
+                <Image 
+                    src={theme === 'dark' ? '/images/qualifications-light.png' : '/images/qualifications-dark.png'}
+                    alt='Qualifications'
+                    className='w-44 h-36 object-cover' 
+                    width="100"
+                    height="100"
+                />
 
                 {education.map((record) => (
                     <Box key={record.level} className='text-center' mb='6'>

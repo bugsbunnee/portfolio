@@ -22,7 +22,13 @@ const ProfilePicture = () => {
             <Flex flexGrow='1' justify='center'>
                 <Card className='w-full min-w-96 p-8'>
                     {session!.user!.image ? 
-                        <Image src={session!.user.image} alt='Profile' className='w-full h-44 object-cover rounded-xl' />
+                        <Image
+                            src={session!.user.image}
+                            alt='Profile'
+                            className='w-full h-44 object-cover rounded-xl' 
+                            width="100"
+                            height="100"
+                        />
                         : (
                             <Box className='w-full h-44 bg-zinc-700 rounded-xl flex justify-center items-center'>
                                 <CameraIcon width='40' height='40' />

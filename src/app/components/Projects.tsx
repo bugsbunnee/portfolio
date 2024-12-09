@@ -13,8 +13,17 @@ import { ProjectItem, STACK } from '@/app/utils';
 const Projects = () => {
     const projectItems: ProjectItem[] = [
         {
-            url: 'https://exactrem.vercel.app/',
-            title: 'Exactrem App',
+            url: 'https://capplc.com/',
+            title: 'CAP Official Website',
+            image: '/images/cap.png',
+            skill: ['React JS', 'Node JS', 'Express'],
+            description: 'Official Website for Chemical Allied Products',
+            isConfidential: false,
+            stack: STACK.FULLSTACK
+        },
+        {
+            url: 'https://exactrem.com/',
+            title: 'Exactrem',
             image: '/images/exactrem.png',
             skill: ['React JS', 'Next JS', 'Firebase'],
             description: 'An interactive website for foreign exchange transfers',
@@ -22,9 +31,36 @@ const Projects = () => {
             stack: STACK.FRONTEND_WEB
         },
         {
+            url: 'https://www.lifebankcares.com/',
+            title: 'LifeBank Official Website',
+            image: '/images/lifebank.png',
+            description: 'The official website for LifeBank',
+            skill: ['Angular JS', 'TypeScript'],
+            isConfidential: false,
+            stack: STACK.FRONTEND_WEB,
+        },
+        {
+            url: 'https://aabridgeandspartan.com/',
+            title: 'A.A. Bridge & Spartan Website',
+            image: '/images/aabs.png',
+            description: 'A beautiful presentational website for a law firm with contact form email integration',
+            skill: ['React JS', 'Next JS'],
+            isConfidential: false,
+            stack: STACK.FRONTEND_WEB
+        },
+        {
             url: 'https://quickcheck.ng/',
             title: 'QuickCheck App',
             image: '/images/quickcheck.png',
+            skill: ['React Native', 'Redux JS', 'Django'],
+            description: 'Collaborator: An app for providing entrepreneurs and businesses with affordable loans.',
+            isConfidential: false,
+            stack: STACK.FULLSTACK
+        },
+        {
+            url: 'https://rsg-chat.vercel.app/',
+            title: 'Dan by RusselSmith',
+            image: '/images/dan.png',
             skill: ['React Native', 'Redux JS', 'Django'],
             description: 'Collaborator: An app for providing entrepreneurs and businesses with affordable loans.',
             isConfidential: false,
@@ -40,15 +76,6 @@ const Projects = () => {
             stack: STACK.FRONTEND_MOBILE
         },
         {
-            url: 'https://aabs-website.vercel.app/',
-            title: 'A.A. Bridge & Spartan Website',
-            image: '/images/aabs.png',
-            description: 'A beautiful presentational website for a law firm with contact form email integration',
-            skill: ['React JS', 'Next JS'],
-            isConfidential: false,
-            stack: STACK.FRONTEND_WEB
-        },
-        {
             url: 'https://play.google.com/store/apps/details?id=com.lifebankdevs.dispatchmobile&hl=en',
             title: 'Dispatch App',
             image: '/images/dispatch.png',
@@ -56,15 +83,6 @@ const Projects = () => {
             description: 'A mobile app for dispatch riders that allows them to keep track of their inventory and productivity',
             isConfidential: false,
             stack: STACK.FRONTEND_MOBILE
-        },
-        {
-            url: 'https://www.lifebankcares.com/',
-            title: 'LifeBank Official Website',
-            image: '/images/lifebank.png',
-            description: 'The official website for LifeBank',
-            skill: ['Angular JS', 'TypeScript'],
-            isConfidential: false,
-            stack: STACK.FRONTEND_WEB,
         },
         {
             url: 'https://rsidms.com/',
@@ -92,15 +110,6 @@ const Projects = () => {
             skill: ['React JS', 'TypeScript'],
             isConfidential: true,
             stack: STACK.FRONTEND_WEB
-        },
-        {
-            url: 'https://quip.lifebank.ng/',
-            title: 'QUIP',
-            image: '/images/quip.png',
-            description: 'A platform where hospitals can purchase medical equipment and request BME services',
-            skill: ['React JS', 'React Native', 'TypeScript'],
-            isConfidential: true,
-            stack: STACK.FULLSTACK
         },
         {
             url: 'https://order.mamakabowls.com/',

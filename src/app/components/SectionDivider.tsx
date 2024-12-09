@@ -52,10 +52,23 @@ const SectionDivider: React.FC<Props> = ({ isAnimating, onEndAnimation }) => {
                 'border-white': isDarkTheme,
             })} 
         >
-            <Image src={isDarkTheme ? '/images/flag-light.png' : '/images/flag-dark.png'} alt='Flag' className='w-6 h-66 object-contain' />
+            <Image 
+                src={isDarkTheme ? '/images/flag-light.png' : '/images/flag-dark.png'} 
+                alt='Flag' 
+                className='w-6 h-66 object-contain' 
+                width="100"
+                height="100"
+            />
+            
             <Flex flexGrow='1' justify='end'>
                 <motion.div animate={controls}>
-                    <Image src={isDarkTheme ? '/images/car-light.png' : '/images/car-dark.png'} alt='Car' className='w-32 h-6 object-contain' />
+                    <Image 
+                        src={isDarkTheme ? '/images/car-light.png' : '/images/car-dark.png'} 
+                        alt='Car' 
+                        className='w-32 h-6 object-contain' 
+                        width="100"
+                        height="100"
+                    />
                 </motion.div>
             </Flex>
         </Flex>

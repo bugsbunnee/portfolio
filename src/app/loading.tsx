@@ -32,6 +32,8 @@ const HomeLoading = () => {
                     <Image
                         src='/images/profile.png'
                         alt='Profile'
+                        width="100"
+                        height="100"
                         className='transition-all duration-500 object-cover'
                         style={{ width: '100%', height: '100%'}}
                         sizes='fill'

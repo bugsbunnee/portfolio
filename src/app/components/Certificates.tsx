@@ -47,7 +47,13 @@ function Certificates({ displayLabel = true }: Props) {
     return ( 
         <Box width='17.5rem' height='11.75rem' className='relative'>
             <Conditional isVisible={displayLabel}>
-                <Image src={theme === 'dark' ? '/images/certificates-dark.png' : '/images/certificates-light.png'} alt='Certificated' className='w-44 h-36 object-cover ' />
+                <Image 
+                    src={theme === 'dark' ? '/images/certificates-dark.png' : '/images/certificates-light.png'} 
+                    alt='Certificated' 
+                    className='w-44 h-36 object-cover'
+                    width="100"
+                    height="100" 
+                />
             </Conditional>
 
             <AppSlider slidesToShow={1}>

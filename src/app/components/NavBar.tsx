@@ -90,6 +90,8 @@ const NavBar = () => {
                                 src={isDark ? '/images/dark-mode.png' : '/images/light-mode.png'}
                                 alt="Toggle"
                                 className='dark-theme object-cover h-80 w-auto max-sm:h-36 md:h-48'
+                                width="100"
+                                height="100"
                             />
                         </Button>
                     </Box>
